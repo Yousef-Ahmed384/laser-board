@@ -1,0 +1,23 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (ConsoleApplication1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Main.cpp
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(70,30): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(70,25): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(71,30): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(71,24): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(72,24): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(72,20): warning C4305: 'argument': truncation from 'double' to 'float'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(94,47): warning C4305: 'argument': truncation from 'int' to 'sf::Uint8'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(94,47): warning C4309: 'argument': truncation of constant value
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,47): warning C4305: 'argument': truncation from 'double' to 'T'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,47): warning C4305:         with
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,47): warning C4305:         [
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,47): warning C4305:             T=float
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,47): warning C4305:         ]
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,41): warning C4305: 'argument': truncation from 'double' to 'T'
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,41): warning C4305:         with
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,41): warning C4305:         [
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,41): warning C4305:             T=float
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(97,41): warning C4305:         ]
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(100,66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\laserchess sfml\mycode\ConsoleApplication1\Main.cpp(100,47): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  ConsoleApplication1.vcxproj -> D:\laserchess sfml\mycode\x64\Debug\SFML Template.exe
