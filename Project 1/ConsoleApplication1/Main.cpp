@@ -3,11 +3,11 @@
 #include<iostream>
 using namespace std;
 using namespace sf;
-int r, c,Tr,Tc;
+int r = -1, c = -1;
 const int Rows = 8;
 const int Columns = 10;
 RenderWindow window(VideoMode(1920, 1080), "Laser Chess");
-Color backgroundcolor(255,239,226,1);
+Color backgroundcolor(255, 239, 226, 255);
 Texture logo;
 Sprite logoo;
 Texture Red;
@@ -24,13 +24,15 @@ Text text2;
 
 struct cell {
     bool isempty = true;
-    int  cells[Rows][Columns];
+    Vector2f Position;
 };
-cell table;
+cell table[Rows][Columns];
+
 void Start();
 void Update();
 void Draw();
-int index();
+void index(Vector2i mouseposition);
+
 int main()
 {
 
@@ -42,15 +44,10 @@ int main()
         {
             if (event.type == Event::Closed)
                 window.close();
-
-            if (event.type == Event::MouseButtonPressed) {
-                if (event.mouseButton.button == Mouse::Left) {
-                    Vector2i mouseposition = Mouse::getPosition(window);
-                    cout << mouseposition.x << " " << mouseposition.y << endl;
-
-                }
+            if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
+                index(Mouse::getPosition(window));
             }
-           
+
         }
 
         Update();
@@ -67,9 +64,9 @@ void Start() {
     Redplayer.setTexture(Red);
     Blue.loadFromFile("blueplayer.png");
     Blueplayer.setTexture(Blue);
-    Blueplayer.setScale(0.12,0.12);
+    Blueplayer.setScale(0.12, 0.12);
     Redplayer.setScale(0.12, 0.12);
-    logoo.setScale(0.6,0.6);
+    logoo.setScale(0.6, 0.6);
     logoo.setPosition(150, 25);
     Redplayer.setPosition(242, 160);
     Blueplayer.setPosition(242, 765);
@@ -81,26 +78,26 @@ void Start() {
     text1.setString("Red Player");
     text1.setFillColor(Color::Red);
     text1.setStyle(Text::Bold);
-    text1.setPosition(302,165);
+    text1.setPosition(302, 165);
     text2.setFont(font);
     text2.setString("Blue Player");
     text2.setFillColor(Color(13, 110, 253, 255));
     text2.setStyle(Text::Bold);
     text2.setPosition(302, 768);
-    KillsBoard.setSize(Vector2f(68,820));
+    KillsBoard.setSize(Vector2f(68, 820));
     KillsBoard.setOutlineColor(Color::White);
     KillsBoard.setOutlineThickness(2);
-    KillsBoard.setPosition(1200,110);
-    KillsBoard.setFillColor(Color(222,201,180,1200));
+    KillsBoard.setPosition(1200, 110);
+    KillsBoard.setFillColor(Color(222, 201, 180, 1200));
     for (int i = 0; i < Rows; i++) {
         for (int j = 0; j < Columns; j++) {
             grid[i][j].setSize(Vector2f(65.4, 65.4));
             grid[i][j].setFillColor(Color(0, 0, 0, 0));
             grid[i][j].setOutlineColor(Color::White);
-            grid[i][j].setPosition((j * 65.4) + 255 , (i * 65.4) + 224);
+            grid[i][j].setPosition((j * 65.4) + 289, (i * 65.4) + 258);
             grid[i][j].setOutlineThickness(1);
-            
-           // table.cells[Tr][Tc];
+            grid[i][j].setOrigin(grid[i][j].getLocalBounds().width / 2, grid[i][j].getLocalBounds().height / 2);
+            table[i][j].isempty = true;
         }
     }
 
@@ -108,16 +105,44 @@ void Start() {
 }
 
 void Update() {
-    cell grid;
-    if (Mouse::isButtonPressed(Mouse::Left))
-    {
-        Vector2i mousePos = Mouse::getPosition(window);
-        r = ((mousePos.x - 258) / 65);
-        c = ((mousePos.y - 225) / 65);
 
+}
+pair<int, int> getCellIndex(Vector2i mouseposition) {
+    if (mouseposition.y > 225 && mouseposition.y < 745 && mouseposition.x > 258 && mouseposition.x < 914) {
+        r = (mouseposition.y - 226) / 65.4;
+        c = (mouseposition.x - 257) / 65.4;
+        return { r, c };
+    }
+
+}
+void index(Vector2i mouseposition) {
+    pair<int, int> index = getCellIndex(mouseposition);
+    static int prev_r = -1, prev_c = -1;
+
+    if (r != prev_r || c != prev_c) {
+       cout << index.first << " " << index.second << endl;
+        for (int i = 0; i < Rows; i++) {
+            for (int j = 0; j < Columns; j++) {
+                grid[i][j].setFillColor(Color(0, 0, 0, 0));
+            }
+        }
+
+        if (r >= 0 && r < Rows && c >= 0 && c < Columns) {
+            if (r - 1 >= 0) grid[r - 1][c].setFillColor(Color::Green);
+            if (r + 1 < Rows) grid[r + 1][c].setFillColor(Color::Green);
+            if (c - 1 >= 0) grid[r][c - 1].setFillColor(Color::Green);
+            if (c + 1 < Columns) grid[r][c + 1].setFillColor(Color::Green);
+            if (r - 1 >= 0 && c - 1 >= 0) grid[r - 1][c - 1].setFillColor(Color::Green);
+            if (r - 1 >= 0 && c + 1 < Columns) grid[r - 1][c + 1].setFillColor(Color::Green);
+            if (r + 1 < Rows && c - 1 >= 0) grid[r + 1][c - 1].setFillColor(Color::Green);
+            if (r + 1 < Rows && c + 1 < Columns) grid[r + 1][c + 1].setFillColor(Color::Green);
+        }
+
+        prev_r = r;
+        prev_c = c;
     }
 }
-            
+
 
 void Draw() {
 
@@ -137,12 +162,7 @@ void Draw() {
         }
     }
 
-    
+
     window.display();
 
-}
-int index()
-{
-
-    return c, r;
 }
