@@ -1,0 +1,34 @@
+﻿  mirror tr alone.cpp
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(175,24): warning C4804: '-': unsafe use of type 'bool' in operation
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(272,28): warning C4305: 'argument': truncation from 'double' to 'float'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(272,22): warning C4305: 'argument': truncation from 'double' to 'float'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(273,27): warning C4305: 'argument': truncation from 'double' to 'float'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(273,21): warning C4305: 'argument': truncation from 'double' to 'float'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(274,22): warning C4305: 'argument': truncation from 'double' to 'float'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(274,17): warning C4305: 'argument': truncation from 'double' to 'float'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(296,47): warning C4305: 'argument': truncation from 'int' to 'sf::Uint8'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(296,47): warning C4309: 'argument': truncation of constant value
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,38): warning C4305: 'argument': truncation from 'double' to 'T'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,38): warning C4305:         with
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,38): warning C4305:         [
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,38): warning C4305:             T=float
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,38): warning C4305:         ]
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,32): warning C4305: 'argument': truncation from 'double' to 'T'
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,32): warning C4305:         with
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,32): warning C4305:         [
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,32): warning C4305:             T=float
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(304,32): warning C4305:         ]
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,46): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,46): warning C4244:         with
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,46): warning C4244:         [
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,46): warning C4244:             T=float
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,46): warning C4244:         ]
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,28): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,28): warning C4244:         with
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,28): warning C4244:         [
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,28): warning C4244:             T=float
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(308,28): warning C4244:         ]
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(451,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(452,31): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+O:\vs projects\mirror tr alone\mirror tr alone\mirror tr alone.cpp(455,1): warning C4715: 'getCellIndex': not all control paths return a value
+  mirror tr alone.vcxproj -> O:\vs projects\mirror tr alone\Debug\mirror tr alone.exe
